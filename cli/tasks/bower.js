@@ -77,7 +77,7 @@ module.exports = function(grunt) {
 
     // Resolve application index
     var scripts = '';
-    var basePath = 'app';
+    var basePath = grunt.config('app');
     var appIndexPath  = path.resolve(path.join(basePath + '/index.html'));
     var indexBuffer = fs.readFileSync(appIndexPath, 'utf8');
 

@@ -213,7 +213,7 @@ module.exports = function(grunt) {
     var targets = {
       // these paths once config and paths resolved will need to pull in the
       // correct paths from config
-      app: path.resolve('app'),
+      app: path.resolve(grunt.config('app')),
       dist: path.resolve('dist'),
       test: path.resolve('test'),
 
@@ -226,7 +226,7 @@ module.exports = function(grunt) {
       // reload is a special one, acting like `app` but not opening the HTTP
       // server in default browser and forcing the port to LiveReload standard
       // port.
-      reload: path.resolve('app')
+      reload: path.resolve(grunt.config('app'))
     };
 
     target = target || 'app';
